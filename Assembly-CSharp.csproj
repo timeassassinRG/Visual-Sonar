@@ -228,6 +228,8 @@
      <Compile Include="Assets\Imported\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
      <Compile Include="Assets\Imported\Standard Assets\Utility\FPSCounter.cs" />
      <Compile Include="Assets\Imported\Standard Assets\Utility\SimpleActivatorMenu.cs" />
+     <Compile Include="Assets\ShadowZone_Script\ShadowZoneGraph.cs" />
+     <Compile Include="Assets\ShadowZone_Script\ShadowZoneMovement.cs" />
      <None Include="Assets\Imported\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Imported\Menu\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Imported\Menu\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -886,13 +888,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PathCreator.csproj">
-      <Project>{e2c74c58-01c8-429d-722e-8a902b93bdab}</Project>
-      <Name>PathCreator</Name>
-    </ProjectReference>
     <ProjectReference Include="PathCreatorEditor.csproj">
       <Project>{a0d010b7-56b5-5c1a-9c90-177514095ba9}</Project>
       <Name>PathCreatorEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{e2c74c58-01c8-429d-722e-8a902b93bdab}</Project>
+      <Name>PathCreator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -70,7 +70,6 @@ public class ConstantGradientSVP : MonoBehaviour
         //on mouse click
         if (Input.GetMouseButtonDown(0))
             started = true;
-
         if (started)
         {
             refractionVariaton = SVPGraph.angleVariationAtDepths[(int)depth];
@@ -80,17 +79,14 @@ public class ConstantGradientSVP : MonoBehaviour
             P = CalculateP(xi, depth);
             speed = CalculateSpeed(depth);
             SpeedGradient = CalculateSpeedGradient(depth);
-
+            
             if (Mathf.Abs(newTheta) <= 5f && !needToGoUp)
-            {
                 needToGoUp = true;
-            }
-
+            
+            
             if (needToGoUp)
-            {
                 theta = Mathf.Lerp(theta, 10f, 0.001f);
-            }
-
+            
             yComponent = -depth + speed * Mathf.Sin(Mathf.Deg2Rad * (newTheta));
             xComponent = xPos + speed * Mathf.Cos(Mathf.Deg2Rad * (firtsThetaValue));
             transform.position = new Vector3(xComponent, yComponent, 0);
@@ -99,8 +95,6 @@ public class ConstantGradientSVP : MonoBehaviour
             lineRenderer.SetPosition(test, transform.position);
             test++;
         }
-
-
         if (Mathf.Abs(transform.position.y) >= 1999 || transform.position.y >= 0)
         {
             bounce++;
@@ -113,13 +107,9 @@ public class ConstantGradientSVP : MonoBehaviour
                 else 
                     theta = firtsThetaValue;              
             }
-            if (transform.position.y >= 1999)
-            {
+            if (Mathf.Abs(transform.position.y) >= 1999)
                 theta = -firtsThetaValue;
-            }
-
-            //theta = firtsThetaValue;
-            //started = false; //to stop the sphere
+            
         }
     }
 
