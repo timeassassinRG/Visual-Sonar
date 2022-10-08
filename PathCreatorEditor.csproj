@@ -36,11 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Imported\PathCreator\Core\Editor\Helper\ScreenSpacePolyLine.cs" />
-     <Compile Include="Assets\Imported\PathCreator\Core\Editor\PathEditor.cs" />
-     <Compile Include="Assets\Imported\PathCreator\Core\Editor\Helper\PathHandle.cs" />
-     <Compile Include="Assets\Imported\PathCreator\Core\Editor\Helper\MouseUtility.cs" />
-     <None Include="Assets\Imported\PathCreator\Core\Editor\PathCreatorEditor.asmdef" />
+     <Compile Include="Assets\Imported\Asset Store\PathCreator\Core\Editor\Helper\ScreenSpacePolyLine.cs" />
+     <Compile Include="Assets\Imported\Asset Store\PathCreator\Core\Editor\PathEditor.cs" />
+     <Compile Include="Assets\Imported\Asset Store\PathCreator\Core\Editor\Helper\PathHandle.cs" />
+     <Compile Include="Assets\Imported\Asset Store\PathCreator\Core\Editor\Helper\MouseUtility.cs" />
+     <None Include="Assets\Imported\Asset Store\PathCreator\Core\Editor\PathCreatorEditor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.35f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

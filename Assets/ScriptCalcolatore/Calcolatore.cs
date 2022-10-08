@@ -23,8 +23,6 @@ public class Calcolatore : MonoBehaviour
     [SerializeField] InputField DI_passive;
     [SerializeField] InputField DT_active;
     [SerializeField] InputField DT_passive;
-    [SerializeField] InputField NL_active;
-    [SerializeField] InputField NL_passive;
 
     //riferimento al risultato
     [SerializeField] Text result;
@@ -43,31 +41,20 @@ public class Calcolatore : MonoBehaviour
     float DI_passiveValue;
     float DT_activeValue;
     float DT_passiveValue;
-    float NL_activeValue;
-    float NL_passiveValue;
     string resultValue;
 
-    string errorString;
-
     public void Awake(){
-        SetDefaultValues();
-        errorString = " ";
+        setDefaultValues();
     }
 
     public void main(){
-        GetValues();
-        if(!CheckValues()){
-            resultValue = "Valori non validi";
-            result.text = errorString;
-            return;
-        }
+        getValues();
         //per determinare che sonar usare è necessario calcolare il FOM e la perdita di trasimissione per ogni modalità
         /*calcoliamo la transimission loss per ogni modalità:
         * controlliamo il target detection range e la profondità dell'acqua
         * nel caso in cui il target detection range è maggiore della profondità dell'acqua, bisognerà usare
         * l'equazione del cylindrical spreading
         */
-
         double absorptionCoefficentActive = ((0.036*Mathf.Pow(frequencyValue,2))/(Mathf.Pow(frequencyValue,2)+3600))+(3.2*Mathf.Pow(10,-7)*Mathf.Pow(frequencyValue,2));
         double absorptionCoefficentPassive = ((0.036*Mathf.Pow(radiatedNoiseFrequencyValue/1000,2))/(Mathf.Pow(radiatedNoiseFrequencyValue/1000,2)+3600))+(3.2*Mathf.Pow(10,-7)*Mathf.Pow(radiatedNoiseFrequencyValue/1000,2));
         Debug.Log("frequencyValue: "+frequencyValue);
@@ -85,9 +72,13 @@ public class Calcolatore : MonoBehaviour
         //rimane da calcolare il NL per la modalità attiva e il NL per la modalità passiva
         //per questo dobbiamo sfruttare le curve di wenz ed il nomogram (non so come farlo)
         //il NL si calcola NL = AN  SN. 
+        double NL_ACTIVE = 58.65;
+        double NL_PASSIVE = 62.75;
+        Debug.Log("NL Attivo: "+NL_ACTIVE);
+        Debug.Log("NL Passivo: "+NL_PASSIVE);
         //calcolo FOM
-        double FOM_ACTIVE = sourceLevelValue + targetStrengthValue - NL_activeValue + DI_activeValue - DT_activeValue;
-        double FOM_PASSIVE = sourceLevelValue - NL_passiveValue + DI_passiveValue - DT_passiveValue;
+        double FOM_ACTIVE = sourceLevelValue + targetStrengthValue - NL_ACTIVE + DI_activeValue - DT_activeValue;
+        double FOM_PASSIVE = sourceLevelValue - NL_PASSIVE + DI_passiveValue - DT_passiveValue;
         Debug.Log("FOM Attivo: "+FOM_ACTIVE);
         Debug.Log("FOM Passivo: "+FOM_PASSIVE);
     
@@ -95,78 +86,7 @@ public class Calcolatore : MonoBehaviour
         result.text = resultValue;
     }
 
-    public bool CheckValues(){
-        bool check = true;
-        errorString = " ";
-        if(seaStateValue < 0 || seaStateValue > 8){
-            errorString = errorString + " Sea State non valido,";
-            check = false;
-        }
-        if(depthValue < 0 || depthValue > 2000){
-            errorString = errorString + " Profondità non valida,";
-            check = false;
-        }
-        if(radiatedNoiseSourceLevelValue < 0 || radiatedNoiseSourceLevelValue > 200){
-            errorString = errorString + " Radiated Noise Source Level non valido,";
-            check = false;
-        }
-        if(radiatedNoiseFrequencyValue < 0 || radiatedNoiseFrequencyValue > 100000){
-            errorString = errorString + " Radiated Noise Frequency non valido,";
-            check = false;
-        }
-        if(targetStrengthValue < 0 || targetStrengthValue > 200){
-            errorString = errorString + " Target Strength non valido,";
-            check = false;
-        }
-        if(targetDetectionRangeValue < 0 || targetDetectionRangeValue > 100000){
-            errorString = errorString + " Target Detection Range non valido,";
-            check = false;
-        }
-        if(sourceLevelValue < 0 || sourceLevelValue > 200){
-            errorString = errorString + " Source Level non valido,";
-            check = false;
-        }
-        if(frequencyValue < 0 || frequencyValue > 100000){
-            errorString = errorString + " Frequency non valido,";
-            check = false;
-        }
-        if(selfNoiseActiveValue < 0 || selfNoiseActiveValue > 200){
-            errorString = errorString + " Self Noise Active non valido,";
-            check = false;
-        }
-        if(selfNoisePassiveValue < 0 || selfNoisePassiveValue > 200){
-            errorString = errorString + " Self Noise Passive non valido,";
-            check = false;
-        }
-        if(DI_activeValue < 0 || DI_activeValue > 200){
-            errorString = errorString + " DI Active non valido,";
-            check = false;
-        }
-        if(DI_passiveValue < 0 || DI_passiveValue > 200){
-            errorString = errorString + " DI Passive non valido,";
-            check = false;
-        }
-        if(DT_activeValue < 0 || DT_activeValue > 200){
-            errorString = errorString + " DT Active non valido,";
-            check = false;
-        }
-        if(DT_passiveValue < 0 || DT_passiveValue > 200){
-            errorString = errorString + " DT Passive non valido,";
-            check = false;
-        }
-        if(NL_activeValue < 0 || NL_activeValue > 200){
-            errorString = errorString + " NL Active non valido,";
-            check = false;
-        }
-        if(NL_passiveValue < 0 || NL_passiveValue > 200){
-            errorString = errorString + " NL Passive non valido,";
-            check = false;
-        }
-        return check;
-    }
-
-
-    public void GetValues(){
+    public void getValues(){
         seaStateValue = float.Parse(seaState.text);
         depthValue = float.Parse(depth.text);
         radiatedNoiseSourceLevelValue = float.Parse(radiatedNoiseSourceLevel.text);
@@ -181,11 +101,9 @@ public class Calcolatore : MonoBehaviour
         DI_passiveValue = float.Parse(DI_passive.text);
         DT_activeValue = float.Parse(DT_active.text);
         DT_passiveValue = float.Parse(DT_passive.text);
-        NL_activeValue = float.Parse(NL_active.text);
-        NL_passiveValue = float.Parse(NL_passive.text);
     }
 
-    public void SetDefaultValues(){
+    public void setDefaultValues(){
         seaState.text = "2";
         depth.text = "200";
         radiatedNoiseSourceLevel.text = "100";
@@ -200,11 +118,9 @@ public class Calcolatore : MonoBehaviour
         DI_passive.text = "10";
         DT_active.text = "-2";
         DT_passive.text = "-3";
-        NL_active.text = "58";
-        NL_passive.text = "62";
     }
 
-    public void PrintAllValues(){
+    public void printAllValues(){
         Debug.Log("seaStateValue: " + seaStateValue);
         Debug.Log("depthValue: " + depthValue);
         Debug.Log("radiatedNoiseSourceLevelValue: " + radiatedNoiseSourceLevelValue);
@@ -219,7 +135,5 @@ public class Calcolatore : MonoBehaviour
         Debug.Log("DI_passiveValue: " + DI_passiveValue);
         Debug.Log("DT_activeValue: " + DT_activeValue);
         Debug.Log("DT_passiveValue: " + DT_passiveValue);
-        Debug.Log("NL_activeValue: " + NL_activeValue);
-        Debug.Log("NL_passiveValue: " + NL_passiveValue);
     }
 }

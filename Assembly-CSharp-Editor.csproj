@@ -36,14 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Imported\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <Compile Include="Assets\Imported\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
-     <Compile Include="Assets\Imported\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
-     <Compile Include="Assets\Imported\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
-     <Compile Include="Assets\Imported\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
-     <Compile Include="Assets\Imported\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
-     <Compile Include="Assets\Imported\Menu\SlimUI\Modern Menu 1\Editor\SlimUIWindow.cs" />
-     <Compile Include="Assets\Imported\PathCreator\Examples\Scripts\Editor\PathSceneToolEditor.cs" />
+     <Compile Include="Assets\Imported\Asset Store\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Imported\Asset Store\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
+     <Compile Include="Assets\Imported\Asset Store\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
+     <Compile Include="Assets\Imported\Asset Store\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
+     <Compile Include="Assets\Imported\Asset Store\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
+     <Compile Include="Assets\Imported\Asset Store\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
+     <Compile Include="Assets\Imported\Asset Store\Menu\SlimUI\Modern Menu 1\Editor\SlimUIWindow.cs" />
+     <Compile Include="Assets\Imported\Asset Store\PathCreator\Examples\Scripts\Editor\PathSceneToolEditor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.35f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

@@ -14,16 +14,16 @@ public static class SVPGraph
         speedAtDepths = new float[3000];
         angleVariationAtDepths = new float[3000];
 
-        float tmp = 2f;
+        float tmp = 3f;
         float tmp2 = 10f;
         for (int i = 0; i < 3000; i++)
         {
                 speedAtDepths[i] = tmp;
                 //tmp = tmp + 0.005f;
-                tmp2 = (i*60)/1500;
-                if(i > 1500){
+                tmp2 = (i*90)/1800;
+                /*if(i > 1500){
                     tmp2 = 60;
-                }
+                }*/
                 angleVariationAtDepths[i] = tmp2;
                 
                 //tmp += 0.001f;
