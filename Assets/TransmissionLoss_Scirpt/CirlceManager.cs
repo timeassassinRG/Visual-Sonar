@@ -25,6 +25,9 @@ public class CirlceManager : MonoBehaviour
             {
                 spheres[shperesCounter].GetComponent<TLMovement>().enabled = true;
                 spheres[shperesCounter].GetComponent<TLMovement>().theta = i;
+                //se la sfera ha angolo ° aggiuni uno script per tenere conto del raggio e calcolare successivamente il transmission loss
+                if(i == 0)
+                    spheres[shperesCounter].AddComponent<RangeTracker>();
             }
             shperesCounter++;
         }
@@ -37,9 +40,6 @@ public class CirlceManager : MonoBehaviour
         lineRenderer.endColor = Color.red;
         lineRenderer.startWidth = 10f;
         lineRenderer.endWidth = 10f;
-        //lineRenderer.positionCount = 1;
-        //lineRenderer.SetPosition(vertexCount, spheres[0].transform.position);
-        //vertexCount++;
         lineRenderer.positionCount = 0;
         ok = false;
     }
@@ -50,7 +50,6 @@ public class CirlceManager : MonoBehaviour
         {
             ok = true;
         }
-
         if (ok)
         {
             lineRenderer.positionCount = shperesCounter + 1;

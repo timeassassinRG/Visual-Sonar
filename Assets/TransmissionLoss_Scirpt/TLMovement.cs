@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//sopprimi CS0162: Unreachable code detected
 #pragma warning disable 162
 
 public class TLMovement : MonoBehaviour
@@ -26,17 +25,6 @@ public class TLMovement : MonoBehaviour
         depth = Mathf.Abs(transform.position.y);
         xPos = transform.position.x;
         started = false;
-        
-        /*vertexCount = 0;
-        lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.material.color = Color.red;
-        lineRenderer.startColor = Color.red;
-        lineRenderer.endColor = Color.red;
-        lineRenderer.startWidth = 4f;
-        lineRenderer.endWidth = 4f;
-        lineRenderer.positionCount = 1;
-        lineRenderer.SetPosition(vertexCount, transform.position);
-        vertexCount++;*/
     }
 
 
@@ -48,11 +36,7 @@ public class TLMovement : MonoBehaviour
             xComponent = transform.position.x + speed * Mathf.Cos(theta * Mathf.Deg2Rad);
             yComponent = transform.position.y + speed * Mathf.Sin(theta * Mathf.Deg2Rad);
             yComponent = Mathf.Clamp(yComponent, -4000, 0);
-
             transform.position = new Vector3(xComponent, yComponent, 0);
-            /*lineRenderer.positionCount++;
-            lineRenderer.SetPosition(vertexCount, transform.position);
-            vertexCount++;*/
         }
 
     }
