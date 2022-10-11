@@ -26,8 +26,11 @@ public class CirlceManager : MonoBehaviour
                 spheres[shperesCounter].GetComponent<TLMovement>().enabled = true;
                 spheres[shperesCounter].GetComponent<TLMovement>().theta = i;
                 //se la sfera ha angolo ° aggiuni uno script per tenere conto del raggio e calcolare successivamente il transmission loss
-                if(i == 0)
+                if (i == 0)
+                {
                     spheres[shperesCounter].AddComponent<RangeTracker>();
+                    spheres[shperesCounter].transform.name = "MainSphere";
+                }
             }
             shperesCounter++;
         }

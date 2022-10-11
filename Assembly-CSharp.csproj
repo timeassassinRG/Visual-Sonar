@@ -83,6 +83,7 @@
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\SmoothFollow.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
      <Compile Include="Assets\Imported\Asset Store\CodeMonkey\Utils\Button_Sprite.cs" />
+     <Compile Include="Assets\TransmissionLoss_Scirpt\TLMovement.cs" />
      <Compile Include="Assets\SVP1_Script\SphereManager.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\Imported\Asset Store\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
@@ -104,6 +105,7 @@
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
      <Compile Include="Assets\Imported\Asset Store\CodeMonkey\Utils\UtilsClass.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\TransmissionLoss_Scirpt\CirlceManager.cs" />
      <Compile Include="Assets\Imported\Asset Store\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
      <Compile Include="Assets\SVPVisualizzationScript\WindowGraph.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\WaypointCircuit.cs" />
@@ -157,6 +159,7 @@
      <Compile Include="Assets\Imported\Asset Store\CodeMonkey\Utils\UI_Bar.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\ForcedReset.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
+     <Compile Include="Assets\Imported\Old\FirstVer\LineManage.cs" />
      <Compile Include="Assets\Imported\Old\SVP\Scripts\3D\MyMouseLook.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
@@ -170,6 +173,7 @@
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneControlSurfaceAnimator.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
+     <Compile Include="Assets\Imported\Old\FirstVer\Scripts\BRT.cs" />
      <Compile Include="Assets\Imported\Asset Store\PathCreator\Examples\Scripts\PathSceneTool.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
@@ -177,6 +181,7 @@
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\AlphaButtonClickMask.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Cameras\Scripts\PivotBasedCameraRig.cs" />
+     <Compile Include="Assets\Imported\Old\FirstVer\Scripts\PassiveSonar.cs" />
      <Compile Include="Assets\Imported\Asset Store\PathCreator\Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\AutoMoveAndRotate.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\FOVKick.cs" />
@@ -202,6 +207,7 @@
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+     <Compile Include="Assets\TransmissionLoss_Scirpt\RangeTracker.cs" />
      <Compile Include="Assets\Imported\Asset Store\UnderwaterFantasy\Scripts\Done_BGScroller.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -221,6 +227,7 @@
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\SVPVisualizzationScript\SeaManger.cs" />
+     <Compile Include="Assets\Imported\Old\FirstVer\Scripts\RadarPing.cs" />
      <Compile Include="Assets\Imported\Asset Store\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
      <Compile Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -230,12 +237,7 @@
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\FPSCounter.cs" />
      <Compile Include="Assets\Imported\Asset Store\Standard Assets\Utility\SimpleActivatorMenu.cs" />
-     <Compile Include="Assets\Imported\Old\FirstVer\Scripts\BRT.cs" />
-     <Compile Include="Assets\Imported\Old\FirstVer\Scripts\PassiveSonar.cs" />
-     <Compile Include="Assets\Imported\Old\FirstVer\LineManage.cs" />
-     <Compile Include="Assets\Imported\Old\FirstVer\Scripts\RadarPing.cs" />
-     <Compile Include="Assets\TransmissionLoss_Scirpt\CirlceManager.cs" />
-     <Compile Include="Assets\TransmissionLoss_Scirpt\TLMovement.cs" />
+     <Compile Include="Assets\TransmissionLoss_Scirpt\TLCalculator.cs" />
      <None Include="Assets\Imported\Asset Store\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Imported\Asset Store\Menu\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -894,13 +896,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PathCreator.csproj">
-      <Project>{e2c74c58-01c8-429d-722e-8a902b93bdab}</Project>
-      <Name>PathCreator</Name>
-    </ProjectReference>
     <ProjectReference Include="PathCreatorEditor.csproj">
       <Project>{a0d010b7-56b5-5c1a-9c90-177514095ba9}</Project>
       <Name>PathCreatorEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{e2c74c58-01c8-429d-722e-8a902b93bdab}</Project>
+      <Name>PathCreator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

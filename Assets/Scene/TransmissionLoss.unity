@@ -276,8 +276,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486418199}
+  - component: {fileID: 486418200}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TransmissionLossCalculator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,6 +298,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486418200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486418198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ec1bbace4d1d04b9e42d4db82ee98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &529375931
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +630,7 @@ GameObject:
   - component: {fileID: 557301039}
   - component: {fileID: 557301038}
   m_Layer: 5
-  m_Name: Text (4)
+  m_Name: SL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -840,7 +854,7 @@ GameObject:
   - component: {fileID: 741792307}
   - component: {fileID: 741792306}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Propagazione
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,7 +912,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Propagazione = Cilindrica
+  m_Text: 'Propagazione = '
 --- !u!222 &741792307
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -919,7 +933,7 @@ GameObject:
   - component: {fileID: 872501320}
   - component: {fileID: 872501319}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: TL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -977,7 +991,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Perdita di trasmissione = dB
+  m_Text: 'Perdita di trasmissione = '
 --- !u!222 &872501320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1366,7 +1380,7 @@ GameObject:
   - component: {fileID: 1431161697}
   - component: {fileID: 1431161696}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Raggio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1424,7 +1438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Spreading: Cilyndrica'
+  m_Text: 'Raggio = '
 --- !u!222 &1431161697
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1477,7 +1491,7 @@ GameObject:
   - component: {fileID: 2060140921}
   - component: {fileID: 2060140920}
   m_Layer: 5
-  m_Name: Text (5)
+  m_Name: SHz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
