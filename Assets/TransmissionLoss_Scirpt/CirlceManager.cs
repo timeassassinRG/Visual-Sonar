@@ -41,8 +41,8 @@ public class CirlceManager : MonoBehaviour
         lineRenderer.material.color = Color.red;
         lineRenderer.startColor = Color.red;
         lineRenderer.endColor = Color.red;
-        lineRenderer.startWidth = 10f;
-        lineRenderer.endWidth = 10f;
+        lineRenderer.startWidth = 20f;
+        lineRenderer.endWidth = 20f;
         lineRenderer.positionCount = 0;
         ok = false;
     }
