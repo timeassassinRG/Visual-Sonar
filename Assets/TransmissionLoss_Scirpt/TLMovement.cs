@@ -21,7 +21,7 @@ public class TLMovement : MonoBehaviour
 
     void Start()
     {
-        speed = 0.5f;
+        speed = 10f;
         depth = Mathf.Abs(transform.position.y);
         xPos = transform.position.x;
         started = false;

@@ -14,7 +14,7 @@ public static class ShadowZoneGraph
         speedAtDepths = new float[3000];
         angleVariationAtDepths = new float[3000];
 
-        float tmp = 1.5f;
+        float tmp = 10f;
         float tmp2 = 0f;
         for (int i = 0; i < 3000; i++)
         {

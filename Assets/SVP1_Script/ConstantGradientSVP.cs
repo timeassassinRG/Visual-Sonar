@@ -117,7 +117,8 @@ public class ConstantGradientSVP : MonoBehaviour
 
     public float CalculateSpeed(float y)
     {
-        return GetSpeed(y - 1) + (y - (y - 1)) * CalculateSpeedGradient(y - 1);
+        return GetSpeed(y);
+        //return GetSpeed(y - 1) + (y - (y - 1)) * CalculateSpeedGradient(y - 1);
     }
 
     public float CalculateSpeedGradient(float y)
